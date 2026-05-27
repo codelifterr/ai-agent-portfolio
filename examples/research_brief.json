@@ -1,0 +1,20 @@
+{
+  "goal": "Prepare a short AI-agent research brief",
+  "steps": [
+    {
+      "name": "define_scope",
+      "instruction": "Define the question, audience, and output format",
+      "tool": "notes"
+    },
+    {
+      "name": "collect_evidence",
+      "instruction": "Search trusted sources; compare claims; note uncertainty",
+      "tool": "checklist"
+    },
+    {
+      "name": "finalize",
+      "instruction": "Write concise answer with confidence level",
+      "tool": "notes"
+    }
+  ]
+}
