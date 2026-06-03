@@ -44,6 +44,4 @@ class AgentWorkflow:
 
     def _summarize(self, evidence: list[str]) -> str:
         joined = " | ".join(evidence)
-        return f"Goal: {self.goal}
-Evidence: {joined}
-Status: completed"
+        return f"Goal: {self.goal}\nEvidence: {joined}\nStatus: completed"

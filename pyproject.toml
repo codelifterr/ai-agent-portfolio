@@ -1,0 +1,9 @@
+[project]
+name = "ai-agent-portfolio"
+version = "0.1.0"
+description = "Small Python examples for agent workflow design and tool-use concepts."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

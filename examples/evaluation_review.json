@@ -1,0 +1,8 @@
+{
+  "goal": "Review an AI answer for quality and list improvement notes",
+  "steps": [
+    {"name": "check instruction following", "instruction": "Compare the answer against the original user request", "tool": "notes"},
+    {"name": "check evidence", "instruction": "Identify claims that need source verification", "tool": "notes"},
+    {"name": "summarize improvements", "instruction": "Write concise fixes for the next version", "tool": "notes"}
+  ]
+}

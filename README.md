@@ -1,6 +1,8 @@
 # AI Agent Portfolio
 
-Small Python examples for AI agent workflow design, task planning, and tool-use concepts.
+Small Python examples that demonstrate AI-agent workflow design, task planning, tool-use concepts, evidence collection, and final summaries.
+
+This is a compact technical project: the workflow runner is intentionally simple so the control flow is easy to inspect.
 
 ## What is inside
 
@@ -8,34 +10,48 @@ Small Python examples for AI agent workflow design, task planning, and tool-use 
 - Reusable task and tool abstractions
 - Example workflows for research, planning, and evaluation
 - Simple tests that document expected behavior
-
-## Run locally
-
-```bash
-python3 -m agent_portfolio.cli examples/research_brief.json
-```
+- JSON input examples for repeatable local runs
 
 ## Project structure
 
 ```text
 agent_portfolio/
-  cli.py
-  workflows.py
-  tools.py
+  cli.py        # CLI entry point
+  workflows.py  # workflow runner and result model
+  tools.py      # simple example tools
 examples/
   research_brief.json
+  evaluation_review.json
 tests/
   test_workflows.py
 ```
 
-## Example idea
+## Run locally
 
-The project models an agent as a workflow:
+```bash
+python3 -m agent_portfolio.cli examples/research_brief.json
+python3 -m agent_portfolio.cli examples/evaluation_review.json
+```
 
-1. receive a goal
-2. break it into steps
-3. choose tools
-4. collect evidence
-5. produce a verified result
+## Run tests
 
-This is intentionally lightweight and easy to read.
+```bash
+python3 -m unittest discover -s tests -p 'test*.py'
+```
+
+## Example workflow idea
+
+```text
+Goal: prepare a short research brief
+1. collect notes
+2. identify risks or missing evidence
+3. summarize next actions
+```
+
+## Why this project exists
+
+Agent workflows are easier to trust when the steps, tools, and evidence are visible. This project shows a small pattern for making that flow explicit.
+
+## License
+
+MIT
